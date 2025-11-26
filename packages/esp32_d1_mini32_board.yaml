@@ -14,8 +14,8 @@ esp32:
   board: wemos_d1_mini32
   framework:
     type: esp-idf
-    version: 5.3.2  # Pin to 5.3.2 to fix UART regression in 5.4.2
-    platform_version: 6.9.0
+    version: 5.3.2
+    platform_version: 53.03.10  # pioarduino version for ESP-IDF 5.3.x
 
 # Logging disabled - GPIO1/3 are used by LD2410
 # To debug: comment out ld2410_uart and set baud_rate: 115200
