@@ -13,8 +13,8 @@ binary_sensor:
         pulldown: true
     device_class: occupancy
     filters:
-      - delayed_on: 100ms
-      - delayed_off: 100ms
+      - delayed_on: 1s
+      - delayed_off: 1s
 
   # LD2410 binary sensors
   - platform: ld2410

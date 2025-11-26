@@ -27,6 +27,13 @@ uart:
     baud_rate: 256000
     parity: NONE
     stop_bits: 1
+    debug:
+      direction: BOTH
+      dummy_receiver: false
+      after:
+        delimiter: "\n"
+      sequence:
+        - lambda: UARTDebug::log_hex(direction, bytes, ' ');
 
   - id: senseair_co2_uart
     rx_pin: 16  # D4
