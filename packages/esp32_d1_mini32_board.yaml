@@ -8,7 +8,7 @@ esphome:
   project:
     name: custom.airgradient-esp32
     version: "$config_version"
-  min_version: 2024.6.0
+  min_version: 2025.5.0
 
 esp32:
   board: wemos_d1_mini32
