@@ -1,0 +1,44 @@
+substitutions:
+  config_version: 1.0.0
+
+esphome:
+  name: "${name}"
+  friendly_name: "${friendly_name}"
+  name_add_mac_suffix: ${name_add_mac_suffix}
+  project:
+    name: custom.airgradient-esp32
+    version: "$config_version"
+  min_version: 2024.6.0
+
+esp32:
+  board: wemos_d1_mini32
+  framework:
+    type: esp-idf
+
+# Logging disabled - GPIO1/3 are used by LD2410
+# To debug: comment out ld2410_uart and set baud_rate: 115200
+logger:
+  baud_rate: 0
+
+uart:
+  - id: ld2410_uart
+    tx_pin: 1
+    rx_pin: 3
+    baud_rate: 256000
+    parity: NONE
+    stop_bits: 1
+
+  - id: senseair_co2_uart
+    rx_pin: 16  # D4
+    tx_pin: 17  # D3
+    baud_rate: 9600
+
+  - id: pms5003_uart
+    rx_pin: 18  # D5
+    tx_pin: 19  # D6
+    baud_rate: 9600
+
+i2c:
+  sda: 21  # D2
+  scl: 22  # D1
+  frequency: 400kHz
