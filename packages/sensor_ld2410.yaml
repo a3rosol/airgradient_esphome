@@ -10,7 +10,6 @@ binary_sensor:
       number: 35  # input-only pin on ESP32
       mode:
         input: true
-        pulldown: true
     device_class: occupancy
     filters:
       - delayed_on: 1s
