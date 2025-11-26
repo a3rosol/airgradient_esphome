@@ -29,7 +29,7 @@ uart:
     stop_bits: 1
     debug:
       direction: BOTH
-      dummy_receiver: false
+      dummy_receiver: true
       after:
         delimiter: "\n"
       sequence:
