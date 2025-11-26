@@ -24,7 +24,7 @@ uart:
   - id: ld2410_uart
     tx_pin: 1
     rx_pin: 3
-    baud_rate: 256000
+    baud_rate: 115200  # Try 115200 if 256000 doesn't work
     parity: NONE
     stop_bits: 1
 
