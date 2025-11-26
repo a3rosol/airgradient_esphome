@@ -6,8 +6,15 @@ binary_sensor:
   - platform: gpio
     name: "Occupancy"
     id: occupancy_sensor
-    pin: 35  # input-only pin on ESP32
+    pin:
+      number: 35  # input-only pin on ESP32
+      mode:
+        input: true
+        pulldown: true
     device_class: occupancy
+    filters:
+      - delayed_on: 100ms
+      - delayed_off: 100ms
 
   # LD2410 binary sensors
   - platform: ld2410
