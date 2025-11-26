@@ -13,18 +13,14 @@ esphome:
 esp32:
   board: wemos_d1_mini32
   framework:
-    type: arduino
-    version: recommended
+    type: esp-idf
 
-# Logging disabled - GPIO1/3 are used by LD2410
-# To debug: comment out ld2410_uart and set baud_rate: 115200
 logger:
-  baud_rate: 0
 
 uart:
   - id: ld2410_uart
-    tx_pin: 1
-    rx_pin: 3
+    tx_pin: 10
+    rx_pin: 9
     baud_rate: 256000
     parity: NONE
     stop_bits: 1
