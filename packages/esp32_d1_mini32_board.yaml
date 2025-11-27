@@ -10,7 +10,7 @@ esphome:
     version: "$config_version"
 
 esp32:
-  board: wemos_d1_mini32
+  board: mhetesp32minikit
   flash_size: 4MB
   framework:
     type: esp-idf
